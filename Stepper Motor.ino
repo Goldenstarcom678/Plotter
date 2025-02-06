@@ -29,7 +29,7 @@ void setup() {
   steppers.addStepper(RStepper);
   reposition();
   delay(1000);
-  File file = SD.open("jafar.txt");
+  File file = SD.open("Plotter.txt");
   while (true) {
     long p[2];
     String received = "";
@@ -46,7 +46,7 @@ void setup() {
         down();
         continue;
       }
-      if (ch == ',') {
+      if (ch == ',') { 
         p[0] = received.toInt();
         received = "";
         continue;
